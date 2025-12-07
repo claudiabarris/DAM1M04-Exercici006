@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pàgina d'Interactivitat</title>
+    <link rel="stylesheet" href="estils_2.css" />
+</head>
+<body id="pagina-interaccio">
+    <!-- NAVBAR CON TOGGLE -->
+    <nav class="navbar">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Formulari</a></li>
+            <li><a href="interaccio.html">Interactivitat</a></li>
+            <li><a href="#tabs">Pestanyes</a></li>
+            <li><a href="#flip">Flip Card</a></li>
+            <li><a href="#form">Formulari</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Interactivitat CSS Pura</h1>
+        
+        <!-- TABS -->
+        <section class="tabs-container" id="tabs">
+            <div class="tab-buttons">
+                <input type="radio" name="tab" id="tab1" checked />
+                <label for="tab1" class="tab-label">Contingut 1</label>
+                
+                <input type="radio" name="tab" id="tab2" />
+                <label for="tab2" class="tab-label">Contingut 2</label>
+                
+                <input type="radio" name="tab" id="tab3" />
+                <label for="tab3" class="tab-label">Contingut 3</label>
+            </div>
+            
+            <div class="tab-content content-1">
+                <h2>Pestanya 1</h2>
+                <p>Contingut de la primera pestanya amb animació suau.</p>
+            </div>
+            
+            <div class="tab-content content-2">
+                <h2>Pestanya 2</h2>
+                <p>Segona pestanya utilitzant radio buttons i selectors ~.</p>
+            </div>
+            
+            <div class="tab-content content-3">
+                <h2>Pestanya 3</h2>
+                <p>Tercera pestanya amb transicions CSS avançades.</p>
+            </div>
+        </section>
+
+        <!-- FLIP CARD -->
+        <section class="flip-container" id="flip">
+            <input type="checkbox" id="flip-toggle" />
+            <label for="flip-toggle" class="flip-btn">🌀 Girar Targeta</label>
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <h3>🏠 Costat Davant</h3>
+                    <p>Clica el botó per girar!</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3>⭐ Costat Darrere</h3>
+                    <p>Efecte 3D amb checkbox i :checked.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULARI VALIDACIÓ -->
+        <section class="form-section" id="form">
+            <h2>Formulari amb Validació Visual</h2>
+            <form>
+                <div class="form-group">
+                    <input type="email" placeholder="Email requerit" required />
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Telèfon (opcional)" pattern="[0-9]{9}" />
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Selecciona opció</option>
+                        <option value="1">Opció 1</option>
+                        <option value="2">Opció 2</option>
+                    </select>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
