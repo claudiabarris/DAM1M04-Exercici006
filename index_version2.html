@@ -2,124 +2,155 @@
 <html lang="ca">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulari amb validació HTML5</title>
+  <title>Formulari Japan Weekend</title>
   <link rel="stylesheet" href="estils_2.css">
 </head>
 <body>
-  <!-- NAVBAR amb Flexbox -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-link active">🏠 Formulari</a>
-      <a href="interaccio.html" class="nav-link">✨ Interactivitat</a>
-    </div>
-  </nav>
+  <main class="container">
+    <header class="header">
+      <h1>Japan Weekend Barcelona</h1>
+      <p>Inscripció d’activitats · 6‑7 abril 2024</p>
+    </header>
 
-  <main class="main-container">
-    <h1>Formulari de registre</h1>
-
-    <form action="#" method="post" novalidate class="formulari">
-      <!-- Nom complet: text + pattern + title (VALIDACIÓ 1) -->
-      <div class="camp">
-        <label for="nomComplet">Nom complet</label>
-        <input
-          type="text"
-          id="nomComplet"
-          name="nomComplet"
-          required
-          pattern="^[A-ZÀ-Ú][a-zà-ü]+(\s[A-ZÀ-Ú][a-zà-ü]+)+$"
-          title="Escriu nom i cognoms, cada paraula començant en majúscula (mínim dues paraules).">
+    <form class="form" novalidate>
+      <!-- Nom complet -->
+      <div class="field">
+        <label for="nom">Nom complet</label>
+        <input id="nom" name="nom" type="text"
+               placeholder="Nom i cognoms"
+               required
+               pattern="^[A-Za-zÀ-ÿ]+(?:\s+[A-Za-zÀ-ÿ]+){1,3}$"
+               title="Escriu nom i cognoms, només lletres i espais.">
       </div>
 
-      <!-- Correu electrònic (VALIDACIÓ 2) -->
-      <div class="camp">
+      <!-- Correu electrònic -->
+      <div class="field">
         <label for="email">Correu electrònic</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          title="Introdueix un correu electrònic vàlid (exemple@domini.com).">
+        <input id="email" name="email" type="email"
+               placeholder="exemple@correu.com" required>
       </div>
 
-      <!-- Telèfon amb pattern (VALIDACIÓ 3) -->
-      <div class="camp">
+      <!-- Telèfon -->
+      <div class="field">
         <label for="telefon">Telèfon</label>
-        <input
-          type="tel"
-          id="telefon"
-          name="telefon"
-          required
-          pattern="^\+?\d{9,15}$"
-          title="Introdueix entre 9 i 15 dígits, opcionalment començant amb +">
+        <input id="telefon" name="telefon" type="tel"
+               placeholder="+34 600 000 000"
+               pattern="^\+?\d{2,3}\s?\d{3}\s?\d{3}\s?\d{3}$"
+               title="Utilitza un format semblant a +34 600 000 000.">
       </div>
 
-      <!-- Edat -->
-      <div class="camp">
-        <label for="edat">Edat</label>
-        <input
-          type="number"
-          id="edat"
-          name="edat"
-          min="18"
-          max="99"
-          step="1"
-          required>
-      </div>
-
-      <!-- Data de naixement -->
-      <div class="camp">
-        <label for="naixement">Data de naixement</label>
-        <input type="date" id="naixement" name="naixement" required>
+      <!-- Edat i data de naixement -->
+      <div class="field inline">
+        <div>
+          <label for="edat">Edat</label>
+          <input id="edat" name="edat" type="number"
+                 min="10" max="99" step="1">
+        </div>
+        <div>
+          <label for="naixement">Data de naixement</label>
+          <input id="naixement" name="naixement" type="date">
+        </div>
       </div>
 
       <!-- Franja horària -->
-      <div class="camp">
-        <label for="franja">Franja horària</label>
-        <input type="time" id="franja" name="franja">
+      <div class="field inline">
+        <div>
+          <label for="franja">Franja horària preferida</label>
+          <input id="franja" name="franja" type="time">
+        </div>
+        <div>
+          <label for="franja2">Alternativa (data i hora)</label>
+          <input id="franja2" name="franja2" type="datetime-local">
+        </div>
       </div>
 
       <!-- Color preferit -->
-      <div class="camp">
+      <div class="field">
         <label for="color">Color preferit</label>
-        <input type="color" id="color" name="color" value="#0077ff">
+        <input id="color" name="color" type="color" value="#f25b6b">
       </div>
 
-      <!-- Range (TRANSICIÓ 1) -->
-      <div class="camp">
-        <label for="satisfaccio">Nivell de satisfacció (1-10)</label>
-        <input type="range" id="satisfaccio" name="satisfaccio" min="1" max="10" step="1" value="5">
-        <span class="range-value">5</span>
+      <!-- Range -->
+      <div class="field">
+        <label for="intensitat">Intensitat otaku (0‑10)</label>
+        <input id="intensitat" name="intensitat"
+               type="range" min="0" max="10" value="5">
       </div>
 
-      <!-- Aficions: checkbox (TRANSICIÓ 2) -->
-      <fieldset class="camp">
+      <!-- Aficions (checkbox) -->
+      <fieldset class="field">
         <legend>Aficions</legend>
-        <label class="check-container">
-          Esport
-          <input type="checkbox" name="aficions" value="esport">
+        <label class="check-wrap">
+          <input type="checkbox" name="aficions" value="anime">
           <span class="checkmark"></span>
+          Anime
         </label>
-        <label class="check-container">
-          Lectura
-          <input type="checkbox" name="aficions" value="lectura">
+        <label class="check-wrap">
+          <input type="checkbox" name="aficions" value="manga">
           <span class="checkmark"></span>
+          Manga
         </label>
-        <label class="check-container">
-          Música
-          <input type="checkbox" name="aficions" value="musica">
+        <label class="check-wrap">
+          <input type="checkbox" name="aficions" value="cosplay">
           <span class="checkmark"></span>
+          Cosplay
+        </label>
+        <label class="check-wrap">
+          <input type="checkbox" name="aficions" value="jocs">
+          <span class="checkmark"></span>
+          Jocs japonesos
         </label>
       </fieldset>
 
-      <!-- Nivell d'estudis: radio (TRANSICIÓ 3) -->
-      <fieldset class="camp">
-        <legend>Nivell d'estudis</legend>
-        <label class="radio-container">
-          ESO / Batxillerat
-          <input type="radio" name="estudis" value="secundaria" required>
+      <!-- Nivell d’estudis (radio) -->
+      <fieldset class="field">
+        <legend>Nivell d’estudis</legend>
+        <label class="radio-wrap">
+          <input type="radio" name="estudis" value="eso" required>
           <span class="radiomark"></span>
+          ESO / Batxillerat
         </label>
-        <label class="radio-container">
-          FP / Cicle formatiu
+        <label class="radio-wrap">
           <input type="radio" name="estudis" value="fp">
+          <span class="radiomark"></span>
+          FP
+        </label>
+        <label class="radio-wrap">
+          <input type="radio" name="estudis" value="uni">
+          <span class="radiomark"></span>
+          Universitat
+        </label>
+      </fieldset>
+
+      <!-- País -->
+      <div class="field">
+        <label for="pais">País</label>
+        <div class="select-wrap">
+          <select id="pais" name="pais" required>
+            <option value="">Tria un país…</option>
+            <option value="es">Espanya</option>
+            <option value="jp">Japó</option>
+            <option value="fr">França</option>
+            <option value="it">Itàlia</option>
+            <option value="altre">Altres</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Comentaris -->
+      <div class="field">
+        <label for="comentaris">Comentaris</label>
+        <textarea id="comentaris" name="comentaris"
+                  rows="4"
+                  placeholder="Què t’agradaria trobar a l’esdeveniment?"></textarea>
+      </div>
+
+      <!-- Botons -->
+      <div class="actions">
+        <button type="reset" class="btn secondary">Esborrar</button>
+        <button type="submit" class="btn primary">Enviar</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
