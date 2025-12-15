@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <title>Japan Weekend Style</title>
   <link rel="stylesheet" href="estils_2.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body id="pagina-interaccio">
+  <!-- BARRA SUPERIOR GLOBAL -->
   <header class="topbar">
     <div class="logo">Japan Weekend</div>
 
@@ -26,18 +28,13 @@
     </nav>
   </header>
 
+  <!-- CONTENIDO DE INTERACCIÓ -->
   <div class="page-frame">
     <header class="header">
       <div class="logo">JPW BCN</div>
 
-      <!-- Checkbox ocult per al menú mòbil -->
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="hamburger">
-        <span></span><span></span><span></span>
-      </label>
-
-      <!-- Menú principal -->
-      <nav class="menu">
+      <!-- OJO: sin segundo nav-toggle ni .menu principal -->
+      <nav class="menu-interna">
         <a href="#home">Inici</a>
         <a href="#tabs">Pestanyes</a>
         <a href="#carousel">Galeria</a>
@@ -54,9 +51,8 @@
         </div>
       </section>
 
-      <!--  Pestanyes CSS -->
+      <!-- Pestanyes CSS -->
       <section id="tabs" class="tabs">
-        <!-- radios ocults -->
         <input type="radio" name="tab" id="tab1" checked>
         <label for="tab1" class="tab-btn">Programa</label>
 
@@ -66,7 +62,6 @@
         <input type="radio" name="tab" id="tab3">
         <label for="tab3" class="tab-btn">Info pràctica</label>
 
-        <!-- continguts -->
         <div class="content content-1">
           <h2>Programa</h2>
           <p>Tallers, concerts, projeccions i més activitats durant tot el cap de setmana.</p>
@@ -83,7 +78,7 @@
         </div>
       </section>
 
-      <!--  Carousel amb radio buttons -->
+      <!-- Carousel amb radio buttons -->
       <section id="carousel" class="carousel-section">
         <div class="carousel-controls">
           <input type="radio" name="slide" id="slide1" checked>
@@ -105,7 +100,6 @@
             </div>
           </div>
 
-          <!-- botons del carrusel -->
           <div class="dots">
             <label for="slide1"></label>
             <label for="slide2"></label>
