@@ -1,97 +1,99 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pàgina d'Interactivitat</title>
-    <link rel="stylesheet" href="estils_2.css" />
+  <meta charset="UTF-8">
+  <title>Japan Weekend Style</title>
+  <link rel="stylesheet" href="estils_2.css">
 </head>
 <body id="pagina-interaccio">
-    <!-- NAVBAR CON TOGGLE -->
-    <nav class="navbar">
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        
-        <ul class="nav-links">
-            <li><a href="index.html">Formulari</a></li>
-            <li><a href="interaccio.html">Interactivitat</a></li>
-            <li><a href="#tabs">Pestanyes</a></li>
-            <li><a href="#flip">Flip Card</a></li>
-            <li><a href="#form">Formulari</a></li>
-        </ul>
-    </nav>
+  <div class="page-frame">
+    <header class="header">
+      <div class="logo">JPW BCN</div>
+
+      <!-- Checkbox ocult per al menú mòbil -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger">
+        <span></span><span></span><span></span>
+      </label>
+
+      <!-- Menú principal -->
+      <nav class="menu">
+        <a href="#home">Inici</a>
+        <a href="#tabs">Pestanyes</a>
+        <a href="#carousel">Galeria</a>
+      </nav>
+    </header>
 
     <main>
-        <h1>Interactivitat CSS Pura</h1>
-        
-        <!-- TABS -->
-        <section class="tabs-container" id="tabs">
-            <div class="tab-buttons">
-                <input type="radio" name="tab" id="tab1" checked />
-                <label for="tab1" class="tab-label">Contingut 1</label>
-                
-                <input type="radio" name="tab" id="tab2" />
-                <label for="tab2" class="tab-label">Contingut 2</label>
-                
-                <input type="radio" name="tab" id="tab3" />
-                <label for="tab3" class="tab-label">Contingut 3</label>
-            </div>
-            
-            <div class="tab-content content-1">
-                <h2>Pestanya 1</h2>
-                <p>Contingut de la primera pestanya amb animació suau.</p>
-            </div>
-            
-            <div class="tab-content content-2">
-                <h2>Pestanya 2</h2>
-                <p>Segona pestanya utilitzant radio buttons i selectors ~.</p>
-            </div>
-            
-            <div class="tab-content content-3">
-                <h2>Pestanya 3</h2>
-                <p>Tercera pestanya amb transicions CSS avançades.</p>
-            </div>
-        </section>
+      <!-- HERO estil cartell -->
+      <section id="home" class="hero">
+        <div class="hero-card">
+          <h1>Japan Weekend Barcelona</h1>
+          <p>6–7 abril 2024 · Fira Barcelona Gran Via</p>
+          <button class="btn-primary">Compra entrades</button>
+        </div>
+      </section>
 
-        <!-- FLIP CARD -->
-        <section class="flip-container" id="flip">
-            <input type="checkbox" id="flip-toggle" />
-            <label for="flip-toggle" class="flip-btn">🌀 Girar Targeta</label>
-            <div class="flip-card">
-                <div class="flip-card-front">
-                    <h3>🏠 Costat Davant</h3>
-                    <p>Clica el botó per girar!</p>
-                </div>
-                <div class="flip-card-back">
-                    <h3>⭐ Costat Darrere</h3>
-                    <p>Efecte 3D amb checkbox i :checked.</p>
-                </div>
-            </div>
-        </section>
+      <!--  Pestanyes CSS -->
+      <section id="tabs" class="tabs">
+        <!-- radios ocults -->
+        <input type="radio" name="tab" id="tab1" checked>
+        <label for="tab1" class="tab-btn">Programa</label>
 
-        <!-- FORMULARI VALIDACIÓ -->
-        <section class="form-section" id="form">
-            <h2>Formulari amb Validació Visual</h2>
-            <form>
-                <div class="form-group">
-                    <input type="email" placeholder="Email requerit" required />
-                </div>
-                <div class="form-group">
-                    <input type="tel" placeholder="Telèfon (opcional)" pattern="[0-9]{9}" />
-                </div>
-                <div class="form-group">
-                    <select required>
-                        <option value="">Selecciona opció</option>
-                        <option value="1">Opció 1</option>
-                        <option value="2">Opció 2</option>
-                    </select>
-                </div>
-            </form>
-        </section>
+        <input type="radio" name="tab" id="tab2">
+        <label for="tab2" class="tab-btn">Convidats</label>
+
+        <input type="radio" name="tab" id="tab3">
+        <label for="tab3" class="tab-btn">Info pràctica</label>
+
+        <!-- continguts -->
+        <div class="content content-1">
+          <h2>Programa</h2>
+          <p>Tallers, concerts, projeccions i més activitats durant tot el cap de setmana.</p>
+        </div>
+
+        <div class="content content-2">
+          <h2>Convidats</h2>
+          <p>Artistes, cosplayers i creadors de contingut relacionats amb anime i cultura japonesa.</p>
+        </div>
+
+        <div class="content content-3">
+          <h2>Informació pràctica</h2>
+          <p>Horaris, com arribar, accessibilitat i normativa de l’esdeveniment.</p>
+        </div>
+      </section>
+
+      <!--  Carousel amb radio buttons -->
+      <section id="carousel" class="carousel-section">
+        <div class="carousel-controls">
+          <input type="radio" name="slide" id="slide1" checked>
+          <input type="radio" name="slide" id="slide2">
+          <input type="radio" name="slide" id="slide3">
+
+          <div class="carousel">
+            <div class="slide slide-1">
+              <h3>Ambient nocturn</h3>
+              <p>Llums, parades i un aire màgic d’anime i fantasia.</p>
+            </div>
+            <div class="slide slide-2">
+              <h3>Art i il·lustració</h3>
+              <p>Il·lustradors independents amb estils inspirats en manga i videojocs.</p>
+            </div>
+            <div class="slide slide-3">
+              <h3>Cosplay</h3>
+              <p>Desfilades, concursos i trobades de personatges icònics.</p>
+            </div>
+          </div>
+
+          <!-- botons del carrusel -->
+          <div class="dots">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+          </div>
+        </div>
+      </section>
     </main>
+  </div>
 </body>
 </html>
