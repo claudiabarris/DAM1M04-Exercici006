@@ -31,16 +31,16 @@ body {
   color: var(--colorText);
 }
 
-/* En interacció solo cambiamos la disposición (mismo fondo) */
+
 body#pagina-interaccio {
   justify-content: center;
   align-items: flex-start;
 }
 
-/* =========================
+/* 
    BARRA SUPERIOR GLOBAL
    (para formulari e interacció)
-   ========================= */
+   */
 .topbar {
   position: fixed;
   top: 0;
