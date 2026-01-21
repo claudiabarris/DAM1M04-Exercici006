@@ -1,6 +1,5 @@
-/* =========================
-   VARIABLES Y RESET
-   ========================= */
+/* 
+   VARIABLES Y RESET*/
 :root {
   --colorPrincipal: #1976d2;
   --colorPrincipalHover: #125da3;
@@ -14,9 +13,9 @@
   padding: 0;
 }
 
-/* =========================
+/* 
    FONDOS GENERALES
-   ========================= */
+   */
 body {
   min-height: 100vh;
   font-family: "Open Sans", Arial, sans-serif;
@@ -39,7 +38,7 @@ body#pagina-interaccio {
 
 /* 
    BARRA SUPERIOR GLOBAL
-   (para formulari e interacció)
+   
    */
 .topbar {
   position: fixed;
@@ -62,7 +61,7 @@ body#pagina-interaccio .page-frame {
   margin-top: 80px;
 }
 
-/* Logo (reutilizado en barra y en header interno) */
+/* Logo  */
 .logo {
   font-weight: 800;
   letter-spacing: 0.22em;
@@ -106,7 +105,7 @@ body#pagina-interaccio .page-frame {
   width: 100%;
 }
 
-/* Checkbox y hamburguesa */
+/* Checkbox y bara hamburguesa */
 .nav-toggle {
   display: none;
 }
@@ -126,9 +125,9 @@ body#pagina-interaccio .page-frame {
   transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
 }
 
-/* =========================
+/* 
    FORMULARI (index_version2)
-   ========================= */
+   */
 .container {
   width: 100%;
   max-width: 900px;
@@ -321,7 +320,7 @@ textarea:invalid:not(:placeholder-shown) {
   pointer-events: none;
 }
 
-/* Checkbox personalizados */
+/* Checkbox  */
 .check-wrap {
   display: inline-flex;
   align-items: center;
@@ -364,7 +363,7 @@ textarea:invalid:not(:placeholder-shown) {
   border-bottom-color: #fff;
 }
 
-/* Radios personalizados */
+/* Radios  */
 .radio-wrap {
   display: inline-flex;
   align-items: center;
@@ -434,9 +433,9 @@ textarea:invalid:not(:placeholder-shown) {
   color: #fff;
 }
 
-/* =========================
-   INTERACCIÓ (tarjeta, hero, tabs, carrusel)
-   ========================= */
+/* 
+   INTERACCIÓ 
+    */
 
 .page-frame {
   max-width: 960px;
@@ -467,7 +466,7 @@ textarea:invalid:not(:placeholder-shown) {
   margin-bottom: 1.5rem;
 }
 
-/* Navegación interna simple (no hamburguesa) */
+/* Navegación */
 .menu-interna {
   display: flex;
   gap: 1.2rem;
@@ -698,7 +697,7 @@ main {
     display: flex;
   }
 
-  /* Abrir menú cuando el checkbox está marcado (en cualquiera de las dos páginas) */
+  /* Abrir menú  */
   body#pagina-formulari:has(#nav-toggle:checked) .menu,
   body#pagina-interaccio:has(#nav-toggle:checked) .menu {
     max-height: 220px;
